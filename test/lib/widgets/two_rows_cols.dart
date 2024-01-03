@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
 class RowsCols extends StatelessWidget {
   const RowsCols({super.key});
@@ -7,7 +7,7 @@ class RowsCols extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var w = MediaQuery.of(context).size.width;
-    var h = MediaQuery.of(context).size.height;
+    // var h = MediaQuery.of(context).size.height;
     return Scaffold(
         appBar: AppBar(
           title: const Text(
