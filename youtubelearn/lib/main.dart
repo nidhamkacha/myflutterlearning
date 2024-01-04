@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     home: MyApp(),
+    debugShowCheckedModeBanner: false,
   ));
 }
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 45,
+                  backgroundImage: AssetImage("images/mylogo.jpg"),
                 ),
                 SizedBox(
                   width: 50,
@@ -76,7 +78,7 @@ class MyApp extends StatelessWidget {
                         width: 25,
                       ),
                       Text(
-                        "Skill Qode",
+                        "BCA",
                         style: TextStyle(fontSize: 20),
                       ),
                     ],
@@ -94,7 +96,7 @@ class MyApp extends StatelessWidget {
                         width: 25,
                       ),
                       Text(
-                        "Skill Qode",
+                        "Surat,Gujarat.",
                         style: TextStyle(fontSize: 20),
                       ),
                     ],
@@ -112,7 +114,7 @@ class MyApp extends StatelessWidget {
                         width: 25,
                       ),
                       Text(
-                        "Skill Qode",
+                        "nidham78@gmail.com",
                         style: TextStyle(fontSize: 20),
                       ),
                     ],
@@ -130,7 +132,7 @@ class MyApp extends StatelessWidget {
                         width: 25,
                       ),
                       Text(
-                        "Skill Qode",
+                        "6352872411",
                         style: TextStyle(fontSize: 20),
                       ),
                     ],
@@ -141,10 +143,13 @@ class MyApp extends StatelessWidget {
             SizedBox(
               height: 60,
             ),
-            Text(
-              "About Me I Am Nidham Kacha And Now I Am Doing Flutter Development At Skill Qode This Is My First Portfolio App.",
-              style: TextStyle(
-                fontSize: 20,
+            Padding(
+              padding: EdgeInsets.only(right: 10),
+              child: Text(
+                "About Me I Am Nidham Kacha And Now I Am Doing Flutter Development At Skill Qode This Is My First Portfolio App.",
+                style: TextStyle(
+                  fontSize: 19,
+                ),
               ),
             ),
             SizedBox(
