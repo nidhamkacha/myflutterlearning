@@ -8,10 +8,23 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int counter = 1;
+  @override
+  void initState() {
+    super.initState();
+    print("This is Init State.");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("Home Activity"),
+      appBar: AppBar(
+        title: Text("Home Activity"),
+        backgroundColor: Colors.amber,
+      ),
+      body: FloatingActionButton(onPressed: () => setState(() {
+      counter ++;
+      }))
     );
   }
 }

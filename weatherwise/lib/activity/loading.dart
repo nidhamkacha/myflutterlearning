@@ -11,7 +11,26 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("Loading Widget"),
-    );
+        body: SafeArea(
+      child: Column(
+        children: <Widget>[
+          ElevatedButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, "/home");
+              },
+              icon: Icon(Icons.add_to_home_screen),
+              label: Text("Go To Home")),
+          Container(
+            height: 20,
+          ),
+           ElevatedButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, "/location");
+              },
+              icon: Icon(Icons.man_sharp),
+              label: Text("Your Location"))
+        ],
+      ),
+    ));
   }
 }

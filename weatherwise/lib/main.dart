@@ -5,6 +5,12 @@ import 'package:weatherwise/activity/location.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Home(),
+    debugShowCheckedModeBanner: false,
+    // home: Home(),
+    routes: {
+      "/": (context) => Loading(),
+      "/home": (context) => Home(),
+      "/location": (context) => Location(),
+    },
   ));
 }

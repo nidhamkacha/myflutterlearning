@@ -11,7 +11,7 @@ class _LocationState extends State<Location> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("Location"),
+      body: SafeArea(child: Text("Location Widget")),
     );
   }
 }
