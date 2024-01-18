@@ -8,23 +8,48 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  void timer() {
+    Future.delayed(Duration(seconds: 6), () {
+      print("Alarm is ringing");
+    });
+    print("you can do other stuff do");
+  }
+
   int counter = 1;
+  @override
+  void setState(fn) {
+    super.setState(fn);
+    print("Set State Called..");
+  }
+
   @override
   void initState() {
     super.initState();
-    print("This is Init State.");
+    timer();
+    print("This is a init State..");
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    print("Widget Distroyed..");
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Home Activity"),
-        backgroundColor: Colors.amber,
-      ),
-      body: FloatingActionButton(onPressed: () => setState(() {
-      counter ++;
-      }))
-    );
+        appBar: AppBar(
+          title: Text("Home Activity"),
+          backgroundColor: Colors.amber,
+        ),
+        body: Column(
+          children: [
+            FloatingActionButton(
+                onPressed: () => setState(() {
+                      counter += 1;
+                    })),
+            Text("$counter"),
+          ],
+        ));
   }
 }
