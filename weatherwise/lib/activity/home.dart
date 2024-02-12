@@ -8,11 +8,21 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  void timer() {
-    Future.delayed(Duration(seconds: 6), () {
-      print("Alarm is ringing");
+  // void timer() {
+  //   Future.delayed(Duration(seconds: 6), () {
+  //     print("Alarm is ringing");
+  //   });
+  //   print("you can do other stuff do");
+  // }
+  String? username;
+  void getdata() async {
+    await Future.delayed(Duration(seconds: 2), () {
+      username = 'nidham';
     });
-    print("you can do other stuff do");
+  }
+
+  void showData() async {
+    print("$username");
   }
 
   int counter = 1;
@@ -25,7 +35,9 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    timer();
+    // timer();
+    getdata();
+    showData();
     print("This is a init State..");
   }
 
