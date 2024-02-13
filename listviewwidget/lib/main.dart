@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:listviewwidget/first_screen.dart';
+import 'package:listviewwidget/switchui.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -16,44 +18,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(    
-        title: Text('Simple Application'),
-        backgroundColor: Colors.amber,
-        centerTitle: true,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'username',
-                  hintText: 'Enter Your Name',
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'password',
-                  hintText: 'Enter Your Password',
-                ),
-              ),
-            ),
-            ElevatedButton(
-              child: Text('Login'),
-              style: ElevatedButton.styleFrom(onPrimary: Colors.blue),
-              onPressed: () {},
-            )
-          ],
-        ),
-      ),
-    );
+    // return FirstScreen();
+    return SwitchUI();
   }
 }
