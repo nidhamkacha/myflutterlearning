@@ -44,7 +44,7 @@ class _FirstScreenState extends State<FirstScreen> {
             ),
             ElevatedButton(
               child: Text('Login'),
-              style: ElevatedButton.styleFrom(onPrimary: Colors.blue),
+              style: ElevatedButton.styleFrom(foregroundColor: Colors.blue),
               onPressed: () {},
             )
           ],
